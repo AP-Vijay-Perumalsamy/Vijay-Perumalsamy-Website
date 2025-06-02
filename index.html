@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vijay Perumalsamy | Full Stack Developer</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="logo-and-photo">
+          <img
+            src="assets/Vijay-Perumalsamy.png"
+            alt="Vijay Perumalsamy"
+            class="profile-photo"
+          />
+          <h1 class="logo">Vijay Perumalsamy</h1>
+        </div>
+
+        <nav id="navbar" class="nav-collapse" aria-label="Primary navigation">
+          <ul>
+            <li>
+              <a href="#about" class="nav-link"
+                ><i class="fas fa-user"></i> About</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="nav-link"
+                ><i class="fas fa-lightbulb"></i> Skills</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="nav-link"
+                ><i class="fas fa-briefcase"></i> Projects</a
+              >
+            </li>
+            <li>
+              <a href="#experience" class="nav-link"
+                ><i class="fas fa-clock"></i> Experience</a
+              >
+            </li>
+            <li>
+              <a href="#certifications" class="nav-link"
+                ><i class="fas fa-award"></i> Certifications</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="nav-link"
+                ><i class="fas fa-envelope"></i> Contact</a
+              >
+            </li>
+            <!-- Mobile dark mode toggle as menu item -->
+            <li class="mobile-theme-toggle">
+              <button
+                id="theme-toggle-mobile"
+                aria-label="Toggle dark/light theme"
+                title="Toggle dark/light mode"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            aria-label="Toggle dark/light theme"
+            title="Toggle dark/light mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            id="nav-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="navbar"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Floating Social Sidebar -->
+    <div class="social-sidebar">
+      <a
+        href="https://github.com/AP-Vijay-Perumalsamy"
+        target="_blank"
+        aria-label="GitHub"
+        ><i class="fab fa-github"></i
+      ></a>
+      <a
+        href="https://linkedin.com/in/vijay-perumalsamy-11836b1a4"
+        target="_blank"
+        aria-label="LinkedIn"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <a
+        href="https://twitter.com/Apvijaycivil"
+        target="_blank"
+        aria-label="Twitter"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a
+        href="https://www.instagram.com/vijayperumalsamy_be"
+        target="_blank"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </div>
+
+    <main>
+      <section id="about" class="section container reveal">
+        <h2><i class="fas fa-user-circle"></i> About Me</h2>
+        <div class="intro"></div>
+        <p>
+          Full Stack Developer with <span id="experience-years">0</span> of
+          experience delivering scalable, user-friendly applications.<br />
+          Skilled in Angular, React, Node.js, and databases with a passion for
+          clean code and teamwork.<br />
+          Adept at working independently or in teams with excellent
+          problem-solving and leadership skills.
+        </p>
+      </section>
+
+      <section id="skills" class="section container reveal">
+        <h2><i class="fas fa-lightbulb"></i> Skills</h2>
+        <div class="skill">
+          <div class="skill-name">JavaScript / TypeScript</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="95%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">React JS</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Node JS</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Angular</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">PostgreSQL / MySQL</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="85%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">OutSystems</div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" data-fill="80%"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section container reveal">
+        <h2><i class="fas fa-briefcase"></i> Project Experience</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>3rd Party Logistics Scheduler</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Oct 2024 – Present</span
+              >
+              <span class="badge"><i class="fas fa-tools"></i> Angular</span>
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Postman, VS Code, Tortoise GIT,
+                JIRA</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 2</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> United Rentals</span
+              >
+            </div>
+            <p class="project-description">
+              A web app enabling third-party carriers to update delivery and
+              pickup statuses in real-time, improving dispatcher visibility and
+              eliminating phone calls.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles1"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles1" class="roles-list" hidden>
+              <li>Front-end development using Angular.</li>
+              <li>Requirement gathering and understanding client needs.</li>
+              <li>Task tracking and communication using JIRA.</li>
+              <li>UI design and ensuring smooth user experience.</li>
+              <li>UI testing for functionality and responsiveness.</li>
+              <li>API integration for seamless data flow.</li>
+              <li>Implemented Stop Level Data Persistence to enhance UX.</li>
+              <li>Created Jasmine and Karma automated tests for components.</li>
+              <li>
+                Documentation for BrowserStack testing and AWS CloudFront
+                deployment.
+              </li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>Pickup Ticket Utility</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Jun 2024 – Sep 2024</span
+              >
+              <span class="badge"><i class="fas fa-tools"></i> React JS</span>
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Postman, VS Code, Tortoise GIT,
+                JIRA</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 2</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> United Rentals</span
+              >
+            </div>
+            <p class="project-description">
+              Web-based tool streamlining the creation of pickup tickets for
+              rental equipment, supporting bulk and multi-pickup tickets.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles2"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles2" class="roles-list" hidden>
+              <li>Front-end development using React JS.</li>
+              <li>Requirement gathering and client demos.</li>
+              <li>Task management using JIRA.</li>
+              <li>UI design, testing, and smooth UX implementation.</li>
+              <li>API integration for backend communication.</li>
+              <li>Implemented dynamic loaders and toaster notifications.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>Omni-Flux ERP</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Jun 2023 – May 2024</span
+              >
+              <span class="badge"
+                ><i class="fas fa-tools"></i> Next JS, Express JS, PostgreSQL,
+                Node JS, Prisma, Nx</span
+              >
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Postman, DBeaver, VS Code,
+                GitLab</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 5</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> Eco Protection Engineers</span
+              >
+            </div>
+            <p class="project-description">
+              ERP system centralizing finance, HR, inventory to improve
+              operational efficiency.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles3"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles3" class="roles-list" hidden>
+              <li>Database architecture design.</li>
+              <li>Back-end development and API creation.</li>
+              <li>Email configuration and S3 file uploads integration.</li>
+              <li>Implemented Prisma ORM and Multer for document handling.</li>
+              <li>Ensured code quality and standards.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>Leave Management & HRMS</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Jan 2023 – Jun 2023</span
+              >
+              <span class="badge"
+                ><i class="fas fa-tools"></i> Spring Boot, Java, MySQL, Next JS,
+                Express JS</span
+              >
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Postman, DBeaver, VS Code, GitLab,
+                Eclipse</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 5</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> Squapl Media Technologies</span
+              >
+            </div>
+            <p class="project-description">
+              Automated leave management system with role-based authentication,
+              streamlining employee leave tracking and approvals.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles4"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles4" class="roles-list" hidden>
+              <li>Requirement gathering and documentation.</li>
+              <li>Implemented leave type and approval workflows.</li>
+              <li>Role-Based Authentication and Authorization integration.</li>
+              <li>Automated scheduling with Python cronjobs.</li>
+              <li>Data migration from MySQL to PostgreSQL.</li>
+              <li>Deployment, UI design, API development, and code reviews.</li>
+              <li>Mail notification integration.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>Kridas Sports Platform</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Nov 2021 – Dec 2022</span
+              >
+              <span class="badge"
+                ><i class="fas fa-tools"></i> React JS, JavaScript, PostgreSQL,
+                Express JS, Node JS</span
+              >
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Postman, DBeaver, VS Code,
+                GitLab</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 5</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> Kridas Sports (Singapore)</span
+              >
+            </div>
+            <p class="project-description">
+              Sports event management platform connecting individuals and
+              organizations to organize sports events globally.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles5"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles5" class="roles-list" hidden>
+              <li>REST API development and optimization.</li>
+              <li>Email templating and triggering.</li>
+              <li>UI CRUD and API integration.</li>
+              <li>Transaction management, unit testing, and code reviews.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>Chat Bot Application</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Oct 2021 – Nov 2021</span
+              >
+              <span class="badge"
+                ><i class="fas fa-tools"></i> Java, Spring Boot, Node JS, HTML,
+                CSS, JavaScript, Angular</span
+              >
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> Apache Tomcat, VS Code, Spring
+                Boot</span
+              >
+              <span class="badge"
+                ><i class="fas fa-user-friends"></i> Team: 5</span
+              >
+              <span class="badge"
+                ><i class="fas fa-building"></i> Trivent System</span
+              >
+            </div>
+            <p class="project-description">
+              Chat-bot feature added for interactive communication with
+              end-users on behalf of management.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles6"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles6" class="roles-list" hidden>
+              <li>User Interface design.</li>
+              <li>API development and integration.</li>
+              <li>Code reviews and refactoring.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <h3>OutSystems Projects</h3>
+            <div class="project-meta-row">
+              <span class="badge"
+                ><i class="fas fa-calendar-alt"></i> Jun 2021 – Oct 2021</span
+              >
+              <span class="badge"><i class="fas fa-tools"></i> OutSystems</span>
+              <span class="badge"
+                ><i class="fas fa-cogs"></i> OutSystems Service Studio 11</span
+              >
+            </div>
+            <p class="project-description">
+              Bookings application for hotel room management and a reactive web
+              movie database with Excel import/export features.
+            </p>
+            <button
+              class="toggle-roles-btn"
+              aria-expanded="false"
+              aria-controls="roles7"
+            >
+              Roles & Responsibilities <i class="fas fa-chevron-down"></i>
+            </button>
+            <ul id="roles7" class="roles-list" hidden>
+              <li>Email notification feature development.</li>
+              <li>File upload and download handling with restrictions.</li>
+              <li>Carousel widget customization and file size validation.</li>
+              <li>Excel import/export implementation.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section container reveal">
+        <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <article class="experience-main-card">
+          <h3>Aalam Info Solutions LLP</h3>
+          <p class="job-title">Full Stack Developer</p>
+          <p class="duration">2021 – Present</p>
+          <p class="overview">
+            Delivering scalable and maintainable web applications with a focus
+            on clean architecture, API integrations, and responsive UI design.
+            Collaborated extensively with clients from diverse sectors to build
+            robust frontend and backend solutions.
+          </p>
+
+          <h4 class="clients-header">Key Clients & Contributions</h4>
+          <ul class="client-highlights">
+            <li>
+              <strong>United Rentals:</strong> Developed full-stack logistics
+              scheduling and ticketing applications using Angular and React,
+              integrating real-time tracking and APIs.
+            </li>
+            <li>
+              <strong>Eco Protection Engineers:</strong> Architected backend
+              systems for ERP solutions with Next.js, Express, PostgreSQL, and
+              AWS cloud integrations.
+            </li>
+            <li>
+              <strong>Squapl Media Technologies:</strong> Created Leave
+              Management & HRMS platforms with role-based authentication,
+              workflow automation, and API development.
+            </li>
+            <li>
+              <strong>Kridas Sports (Singapore):</strong> Built backend APIs and
+              React frontend modules for a sports event management platform.
+            </li>
+            <li>
+              <strong>Trivent System:</strong> Developed chatbot features
+              leveraging Spring Boot and Node.js, integrating UI components for
+              enhanced user interaction.
+            </li>
+            <li>
+              <strong>OutSystems:</strong> Delivered internal booking and movie
+              database applications featuring file management, notifications,
+              and Excel import/export functionality.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="certifications" class="section container reveal">
+        <h2><i class="fas fa-award"></i> Certifications & Awards</h2>
+        <div class="certification-card">
+          <h3>Associate Traditional Web Developer - OutSystems 11</h3>
+          <p class="cert-date">Issued Oct 2021</p>
+          <p>
+            Certified Associate Traditional Web Developer in OutSystems 11
+            platform.
+          </p>
+        </div>
+        <div class="certification-card">
+          <h3>Top Documentation Contributor Award</h3>
+          <p class="cert-date">Awarded in OSDC-2021</p>
+          <p>
+            Recognized for outstanding documentation contributions during the
+            OutSystems Developer Community 2021.
+          </p>
+        </div>
+
+        <div class="certification-card">
+          <h3>Personal Productivity, Time Management and Prioritization</h3>
+          <p class="cert-date">Completed May 2025 - Coursera</p>
+          <p>
+            Practical skills gained in managing time effectively, strategic
+            prioritization, planning, multitasking, and stress management to
+            boost productivity.
+          </p>
+        </div>
+
+        <div class="certification-card">
+          <h3>Test Your Angular Web Application Using Jasmine and Karma</h3>
+          <p class="cert-date">Completed Apr 2025 - Coursera</p>
+          <p>
+            Skills in Angular unit testing with Jasmine framework and Karma test
+            runner, improving software quality and UI testing.
+          </p>
+        </div>
+
+        <div class="certification-card">
+          <h3>The Complete Prompt Engineering for AI Bootcamp (2024)</h3>
+          <p class="cert-date">Completed Oct 2024 - Udemy</p>
+          <p>
+            Focused on prompt engineering techniques and practical applications
+            in Artificial Intelligence.
+          </p>
+        </div>
+
+        <div class="certification-card">
+          <h3>STEP Certificate for English Language Proficiency</h3>
+          <p class="cert-date">Issued Aug 2023 - The Hindu Group</p>
+          <p>Certified proficiency in English communication skills.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section container reveal">
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:vijayperumalsamy.be@gmail.com"
+            >vijayperumalsamy.be@gmail.com</a
+          >
+        </p>
+        <p><strong>Phone:</strong> +91 8667604201</p>
+        <p>
+          <strong>GitHub:</strong>
+          <a
+            href="https://github.com/AP-Vijay-Perumalsamy"
+            target="_blank"
+            rel="noopener"
+            >github.com/AP-Vijay-Perumalsamy</a
+          >
+        </p>
+
+        <!-- Social links in contact (mobile only) -->
+        <div class="contact-social-mobile">
+          <a
+            href="https://github.com/AP-Vijay-Perumalsamy"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/vijay-perumalsamy-11836b1a4"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://twitter.com/Apvijaycivil"
+            target="_blank"
+            aria-label="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/vijayperumalsamy_be"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-secondary text-white text-center py-3">
+      <small>
+        © <span id="current-year"></span> Vijay Perumalsamy. All rights
+        reserved. |
+        <a
+          href="https://github.com/AP-Vijay-Perumalsamy"
+          target="_blank"
+          rel="noopener"
+          class="text-light text-decoration-underline"
+          >GitHub</a
+        >
+      </small>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
