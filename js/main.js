@@ -64,7 +64,8 @@ window.addEventListener("load", () => {
 });
 
 // Intro typing effect
-const introText = "Full Stack Developer, Backend Specialist, Problem Solver";
+const introText =
+  "Full Stack Developer | React.js, Angular, Node.js, Express.js | AI-assisted development";
 const introEl = document.querySelector(".intro");
 let idx = 0;
 
@@ -135,57 +136,34 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 const currentYear = new Date().getFullYear();
 document.getElementById("current-year").textContent = currentYear;
 
+// Active nav link highlighting on scroll and click
+// Only track sections that are actually in the nav (exclude extra sections like Additional Projects)
+const sections = document.querySelectorAll("main section.nav-section");
+const navLinks = document.querySelectorAll("nav ul li a");
+
 function updateActiveLink() {
-  const sections = document.querySelectorAll("main section");
-  const navLinks = document.querySelectorAll("nav ul li a");
-  const headerOffset = 70; // header height offset
+  let index = sections.length;
 
-  const scrollPosition = window.scrollY + headerOffset + 1; // +1 helps boundary detection
-
-  let currentIndex = sections.length - 1; // Default last section
-
-  for (let i = 0; i < sections.length; i++) {
-    const sectionTop = sections[i].offsetTop;
-    if (scrollPosition < sectionTop) {
-      currentIndex = i - 1;
-      break;
-    }
-  }
-
-  if (currentIndex < 0) currentIndex = 0;
+  while (--index && window.scrollY + 90 < sections[index].offsetTop) {}
 
   navLinks.forEach((link) => link.classList.remove("active"));
-  if (navLinks[currentIndex]) {
-    navLinks[currentIndex].classList.add("active");
-  }
+  navLinks[index].classList.add("active");
 }
 
-// Call updateActiveLink on scroll and load
 window.addEventListener("scroll", updateActiveLink);
-window.addEventListener("load", updateActiveLink);
 
-// Handle nav link clicks (smooth scroll + active class + mobile menu close)
-document.querySelectorAll("nav ul li a").forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
-
-    // Smooth scroll with header offset
     const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
       window.scrollTo({
-        top: targetSection.offsetTop - 70,
+        top: targetSection.offsetTop - 70, // header offset
         behavior: "smooth",
       });
     }
-
-    // Set active immediately on click
-    document
-      .querySelectorAll("nav ul li a")
-      .forEach((l) => l.classList.remove("active"));
-    link.classList.add("active");
-
-    // Close mobile nav if open
+    // close nav menu if mobile open
     if (navbar.classList.contains("open")) {
       navbar.classList.remove("open");
       navToggleBtn.setAttribute("aria-expanded", false);
