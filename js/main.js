@@ -139,15 +139,43 @@ document.getElementById("current-year").textContent = currentYear;
 // Active nav link highlighting on scroll and click
 // Only track sections that are actually in the nav (exclude extra sections like Additional Projects)
 const sections = document.querySelectorAll("main section.nav-section");
-const navLinks = document.querySelectorAll("nav ul li a");
+const navLinks = document.querySelectorAll("nav ul li a.nav-link");
+
+// Create a map of section IDs to their indices
+const sectionIdToIndex = {};
+sections.forEach((section, index) => {
+  sectionIdToIndex[section.id] = index;
+});
+
+// Flag to prevent scroll handler from overriding click handler
+let isScrollingToSection = false;
 
 function updateActiveLink() {
-  let index = sections.length;
+  // Don't update if we're in the middle of a programmatic scroll
+  if (isScrollingToSection) {
+    return;
+  }
+  
+  let index = sections.length - 1;
+  const scrollPosition = window.scrollY + 90;
 
-  while (--index && window.scrollY + 90 < sections[index].offsetTop) {}
+  // Check if we're at the bottom of the page (contact section)
+  const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 10;
+  
+  if (isAtBottom) {
+    // If at bottom, activate the last section (contact)
+    index = sections.length - 1;
+  } else {
+    // Otherwise, find the current section
+    while (index > 0 && scrollPosition < sections[index].offsetTop) {
+      index--;
+    }
+  }
 
   navLinks.forEach((link) => link.classList.remove("active"));
-  navLinks[index].classList.add("active");
+  if (navLinks[index]) {
+    navLinks[index].classList.add("active");
+  }
 }
 
 window.addEventListener("scroll", updateActiveLink);
@@ -158,10 +186,28 @@ navLinks.forEach((link) => {
     const targetId = link.getAttribute("href").substring(1);
     const targetSection = document.getElementById(targetId);
     if (targetSection) {
+      // Find the correct index for this section
+      const sectionIndex = sectionIdToIndex[targetId];
+      
+      // Set flag to prevent scroll handler from interfering
+      isScrollingToSection = true;
+      
+      // Update active link immediately
+      navLinks.forEach((l) => l.classList.remove("active"));
+      if (sectionIndex !== undefined && navLinks[sectionIndex]) {
+        navLinks[sectionIndex].classList.add("active");
+      }
+      
       window.scrollTo({
         top: targetSection.offsetTop - 70, // header offset
         behavior: "smooth",
       });
+      
+      // Re-enable scroll handler after smooth scroll completes
+      setTimeout(() => {
+        isScrollingToSection = false;
+        updateActiveLink();
+      }, 1000);
     }
     // close nav menu if mobile open
     if (navbar.classList.contains("open")) {
